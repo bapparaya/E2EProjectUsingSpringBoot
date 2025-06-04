@@ -22,7 +22,9 @@ public class LoginPage extends BasePage {
 
 
     public String  verifytitle(){
-        return driver.getTitle();
+
+            return driver.getTitle();
+
     }
     public void verifylogin(String username, String password){
         //driver.getTitle();

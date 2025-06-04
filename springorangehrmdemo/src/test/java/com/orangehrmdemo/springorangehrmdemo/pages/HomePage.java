@@ -13,10 +13,13 @@ public class HomePage extends BasePage {
     @FindBy(xpath="//li[@class='oxd-main-menu-item-wrapper'][2]/a")
     WebElement pimbtn;
 
-
+public String verifytitle(){
+    return driver.getTitle();
+}
     public void clickonPIM(){
         pimbtn.click();
         //return new PIMPage(driver);
     }
+
 
 }
