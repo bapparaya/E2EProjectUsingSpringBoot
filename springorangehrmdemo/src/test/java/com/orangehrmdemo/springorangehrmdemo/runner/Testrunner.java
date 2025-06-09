@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/java/com/orangehrmdemo/springorangehrmdemo/features",           // Feature file location
         glue = {"com.orangehrmdemo.springorangehrmdemo.stepdefinations"},                                // Step definitions package
-        plugin = {"pretty", "html:target/cucumber-report.html"}, // Reports
-        monochrome = true                                   // Readable console output
+        plugin = {"pretty", "html:target/cucumber-report.html"},
+        monochrome = true
 )
 public class Testrunner extends AbstractTestNGCucumberTests {
 
