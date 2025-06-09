@@ -24,8 +24,10 @@ public class WebdriverCnfig {
     @Value("${selenium.url}")
     private String url;
 
+    //private static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+
 //    @Bean
-//    //@Scope("cucumber-glue")
+//    @Scope("driverscope")
 //    public WebDriver getDriver(){
 //        WebDriver driver = null;
 //

@@ -1,16 +1,14 @@
 package com.orangehrmdemo.springorangehrmdemo;
 
 import com.orangehrmdemo.springorangehrmdemo.pages.EmloyeeList;
-import com.orangehrmdemo.springorangehrmdemo.pages.HomePage;
+import com.orangehrmdemo.springorangehrmdemo.pages.DashboardPage;
 import com.orangehrmdemo.springorangehrmdemo.pages.LoginPage;
 import com.orangehrmdemo.springorangehrmdemo.pages.PIMPage;
 import com.orangehrmdemo.utils.Utilities;
-import com.orangehrmdemo.springorangehrmdemo.libraries.WebdriverCnfig;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
@@ -27,7 +25,7 @@ class SpringorangehrmdemoApplicationTests {
 	LoginPage loginPage;
 
 	@Autowired
-	HomePage homePage;
+	DashboardPage homePage;
 
 	@Autowired
 	PIMPage pimpage;

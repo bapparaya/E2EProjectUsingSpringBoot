@@ -1,6 +1,6 @@
 package com.orangehrmdemo.springorangehrmdemo.stepdefinations;
 
-import com.orangehrmdemo.springorangehrmdemo.pages.HomePage;
+import com.orangehrmdemo.springorangehrmdemo.pages.DashboardPage;
 import com.orangehrmdemo.springorangehrmdemo.pages.LoginPage;
 
 import io.cucumber.datatable.DataTable;
@@ -14,16 +14,16 @@ import java.util.Map;
 
 public class Loginpagesteps {
 
-@Autowired
+    @Autowired
     LoginPage loginpage;
 
-@Autowired
-    HomePage homepage;
+    @Autowired
+    DashboardPage dashboardPage;
 
     @Given("The user is on the login page")
     public void the_user_is_on_the_login_page() {
-       String title = loginpage.verifytitle();
-        Assert.assertEquals(title,"OrangeHRM");
+        String title = loginpage.verifytitle();
+        Assert.assertEquals(title, "OrangeHRM");
     }
 
     @When("The user attempts to login with valid credentials")
@@ -41,13 +41,14 @@ public class Loginpagesteps {
 
     @Then("The user should be redirected to the dashboard")
     public void the_user_should_be_redirected_to_the_dashboard() {
-       String title= homepage.verifytitle();
-        Assert.assertEquals(title,"OrangeHRM");
+        String title = dashboardPage.verifytitle();
+        Assert.assertEquals(title, "OrangeHRM");
     }
 
     @Then("An error message should be displayed indicating invalid credentials")
     public void error_message_for_invalid_login() {
-        //loginPage.verifyInvalidLoginMessage();
-        Assert.assertEquals(true,true);
+        String message = loginpage.invalidlogin();
+        System.out.println(message);
+        Assert.assertEquals(message, "Invalid credentials");
     }
 }

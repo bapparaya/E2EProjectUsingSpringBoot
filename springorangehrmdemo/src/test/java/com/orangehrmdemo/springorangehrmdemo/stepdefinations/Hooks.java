@@ -19,11 +19,11 @@ public class Hooks {
     public void initialize(Scenario scenario){
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 

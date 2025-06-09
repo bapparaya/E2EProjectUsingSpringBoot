@@ -1,7 +1,7 @@
 package com.orangehrmdemo.springorangehrmdemo;
 
 import com.orangehrmdemo.springorangehrmdemo.pages.EmloyeeList;
-import com.orangehrmdemo.springorangehrmdemo.pages.HomePage;
+import com.orangehrmdemo.springorangehrmdemo.pages.DashboardPage;
 import com.orangehrmdemo.springorangehrmdemo.pages.LoginPage;
 import com.orangehrmdemo.springorangehrmdemo.pages.PIMPage;
 import com.orangehrmdemo.utils.Utilities;
@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -26,7 +27,7 @@ public class TesNGTest extends AbstractTestNGSpringContextTests {
 	LoginPage loginPage;
 
 	@Autowired
-	HomePage homePage;
+	DashboardPage homePage;
 
 	@Autowired
 	PIMPage pimpage;
@@ -47,6 +48,11 @@ public class TesNGTest extends AbstractTestNGSpringContextTests {
 		List<String> random = Utilities.genaraterandom();
 		pimpage.addEmployee(random.get(0),random.get(1),random.get(2));
 
+	}
+
+	@AfterTest
+	public void tearDown(){
+		driver.quit();
 	}
 
 }
