@@ -8,10 +8,9 @@ import io.cucumber.java.en.Then;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 
-import java.util.Collections;
 import java.util.List;
 
-public class Dashboardpagesteps {
+public class DashboardPageStepDefinitions {
 
     @Autowired
     LoginPage loginpage;

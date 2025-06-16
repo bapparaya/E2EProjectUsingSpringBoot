@@ -12,7 +12,7 @@ import org.testng.Assert;
 
 import java.util.Map;
 
-public class Loginpagesteps {
+public class LoginPageStepDefinitions {
 
     @Autowired
     LoginPage loginpage;

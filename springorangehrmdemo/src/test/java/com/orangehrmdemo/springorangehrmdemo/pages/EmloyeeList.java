@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmloyeeList extends BasePage {
 
-    public EmloyeeList(WebDriver driver){
+    public EmloyeeList(WebDriver driver) {
 
     }
 }
